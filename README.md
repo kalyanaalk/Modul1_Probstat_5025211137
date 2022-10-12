@@ -72,7 +72,7 @@ labs(title = "Peluang X = 3 gagal Sebelum Sukses Pertama",
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
 
-Rataan dan varian didapatkan dengan formula sebagai berikut.
+Rataan dan varian didapatkan dengan formula sebagai berikut, sehinggan mendapatkan hasil rataan sama dengan 5 dan varian sama dengan 20.
 
 ```R
 # 1e
@@ -121,7 +121,7 @@ hist(x, main = "Binomial Histogram", xlab = "Sembuh", ylab = "Frekuensi")
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.
 
-Rataan didapatkan dengan mengalikan banyak data dengan peluang kejadian, sedangkan varian didapatkan dengan mengalikan rataan dengan komplemen peluang kejadian.
+Rataan didapatkan dengan mengalikan banyak data dengan peluang kejadian, sedangkan varian didapatkan dengan mengalikan rataan dengan komplemen peluang kejadian. Didapatkan hasil rataan sama dengan 4 dan varian sama dengan 3.2.
 
 ```R
 # 2c
@@ -187,7 +187,7 @@ Dari poin A, didapatkan nilai mendekati 13%, sedangkan dari poin B yang merupaka
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
 
-Nilai rataan dan varian sama dengan lamda.
+Nilai rataan dan varian sama dengan lamda, yaitu 4.5.
 
 ```R
 # 3d
@@ -232,7 +232,7 @@ curve(dchisq(x, v), from = 0, to = 30, n = 100, col = "red", lwd = 2, add = TRUE
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
 
-Rataan sama dengan v, sedangkan varian sama dengan v dikali dua.
+Rataan sama dengan v, sedangkan varian sama dengan v dikali dua. Didapatkan hasil rataan sama dengan 10 dan varian sama dengan 20.
 
 ```R
 # 4c
@@ -279,3 +279,73 @@ hist(rexp(10000, lamda), main = "Distribusi Eksponensial 10000 Bilangan Random")
 
 ### 5-C
 
+>Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+
+Rataan dan varian dicari dengan formula sebagai berikut.
+
+```R
+# 5c
+n = 100
+simnum <- 100
+simdata <- matrix(rexp(simnum * n, lamda), simnum)
+sim_rowmean <- apply(simdata, 1, mean)
+sim_var <- var(sim_rowmean)
+```
+
+## SOAL 6
+
+fotooooooooooooooooooo
+
+>Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan
+
+### 6-A
+
+>Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).
+Keterangan : 
+X1 = Dibawah rata-rata 
+X2 = Diatas rata-rata
+Contoh data :
+1,2,4,2,6,3,10,11,5,3,6,8
+rata-rata = 5.083333
+X1 = 5
+X2 = 6
+
+```R
+n = 100
+m = 50
+std = 8
+
+# 6a
+set.seed(100)
+random <- rnorm(100)
+rerata <- mean(random)
+x1 <- floor(rerata)
+x2 <- ceiling(rerata)
+
+z1 <- (x1 - m) / std
+z2 <- (x2 - m) / std
+
+rnorm(n = 100, mean = m, sd = std)
+plot(rnorm(n = 100, mean = m, sd = std))
+```
+
+### 6-B
+
+>Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan: 
+NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
+
+```R
+# 6.B
+hist(rnorm(n = 100, mean = m, sd = std), xlab="x", ylab="y", breaks = 50,
+     main = "5025211137_Kalyana_Probstat_A_DNhistogram")
+```
+
+### 6-C
+
+>Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.
+
+Varian didapat dengan formula sebagai berikut, dan didapatkan hasil 64.
+
+```R
+varian <- std ** 2
+```
