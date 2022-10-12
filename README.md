@@ -155,3 +155,127 @@ p
 ### 3-B
 
 >Simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini  selama setahun (n = 365)
+
+Histogram digambar dengan bantuan fungsi geom_histogram() sebagai berikut.
+
+```R
+# 3b
+set.seed(2)
+
+poisson_data  <- data.frame('data' = rpois(365, lamda))
+
+poisson_data  %>% ggplot() +
+  geom_histogram(aes(x = data,
+                     y = stat(count / sum(count)),
+                     fill = data == nA),
+                 binwidth = 1,
+                 color = 'black',) +
+  scale_x_continuous(breaks = 0:10) + 
+  labs(x = 'Born per period',
+       y = 'Proportion',
+       title = 'Poisson Distribution Histogram') +
+  theme_bw()
+```
+
+### 3-C
+
+>dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+
+Dari poin A, didapatkan nilai mendekati 13%, sedangkan dari poin B yang merupakan simulasi untuk melakukan pengerjaan hal tersebut, didapatkan hasil sekitar 12%. Hasil keduanya cukup mirip karena nilai A berada di dalam range B. Oleh karena itu, estimasi selama 365 hari akan memberikan hasil yang hampir sama dengan estimasi jumlah bayi yang akan dilahirkan besoknya.
+
+### 3-D
+
+>Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
+
+Nilai rataan dan varian sama dengan lamda.
+
+```R
+# 3d
+rataan = varian = lamda
+rataan
+varian
+```
+
+## SOAL 4
+
+fotooooooooooooooooooo
+
+>Diketahui nilai x = 2 dan v = 10. Tentukan:
+
+### 4-A
+
+>Fungsi Probabilitas dari Distribusi Chi-Square.
+
+Penyelesaian dilakukan dengan menggunakan distribusi Chi-Square dengan bantuan fungsi dchisq(). Dari fungsi tersebut, didapatkan bahwa probabilitasnya sebesar 0.00766415502440505.
+
+```R
+# 4a
+p = dchisq(x, 10)
+p
+```
+
+### 4-B
+
+>Histogram dari Distribusi Chi-Square dengan 100 data random.
+
+Histogram distribusi Chi-Square dengan 100 data random digambar dengan bantuan fungsi curve() sebagai berikut.
+
+```R
+# 4b
+x <- rchisq(100, v)
+hist(x, freq = FALSE, xlim = c(0,31), ylim = c(0,0.2), main = "Chisquare Distribution Histogram")
+
+curve(dchisq(x, v), from = 0, to = 30, n = 100, col = "red", lwd = 2, add = TRUE)
+```
+
+### 4-C
+
+>Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
+
+Rataan sama dengan v, sedangkan varian sama dengan v dikali dua.
+
+```R
+# 4c
+rataan = v
+rataan
+
+varian = v * 2
+varian
+```
+
+## SOAL 5
+
+fotooooooooooooooooooo
+
+>Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
+
+### 5-A
+
+>Fungsi Probabilitas dari Distribusi Exponensial
+
+Penyelesaian dilakukan dengan menggunakan distribusi eksponensial dengan bantuan fungsi dexp(). Dari fungsi tersebut, didapatkan bahwa probabilitasnya sebesar 0.0497870683678639.
+
+```R
+# 5a
+p = dexp(lamda, rate = 1, log = FALSE)
+p
+```
+
+### 5-B
+
+>Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+
+Histogram distribusi eksponensial 10, 100, 1000, dan 10000 bilangan random digambar dengan bantuan fungsi hist() sebagai berikut, sedangkan fungsi par() digunakan untuk menampilkan 4 histogram bersamaan.
+
+```R
+# 5b
+par(mfrow = c(2,2))
+set.seed(1)
+hist(rexp(10, lamda), main = "Distribusi Eksponensial 10 Bilangan Random")
+hist(rexp(100,lamda), main = "Distribusi Eksponensial 100 Bilangan Random")
+hist(rexp(1000, lamda), main = "Distribusi Eksponensial 1000 Bilangan Random")
+hist(rexp(10000, lamda), main = "Distribusi Eksponensial 10000 Bilangan Random")
+```
+
+### 5-C
+
