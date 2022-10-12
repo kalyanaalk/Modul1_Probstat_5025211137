@@ -1,5 +1,8 @@
 # Modul1_Probstat_5025211137
 
+Praktikum 1 Probabilitas dan Statistika
+Rabu, 12 Oktober 2022
+
 ### IDENTITAS
 
 Nama  : Kalyana Putri Al Kanza
