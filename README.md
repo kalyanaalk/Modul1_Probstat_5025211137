@@ -80,7 +80,7 @@ labs(title = "Peluang X = 3 gagal Sebelum Sukses Pertama",
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
 
-Rataan dan varian didapatkan dengan formula sebagai berikut, sehinggan mendapatkan hasil rataan sama dengan 5 dan varian sama dengan 20.
+Rataan dan varian didapatkan dengan formula sebagai berikut, sehingga mendapatkan hasil rataan sama dengan 5 dan varian sama dengan 20.
 
 ```R
 # 1e
@@ -226,6 +226,9 @@ varian
 Penyelesaian dilakukan dengan menggunakan distribusi Chi-Square dengan bantuan fungsi dchisq(). Dari fungsi tersebut, didapatkan bahwa probabilitasnya sebesar 0.00766415502440505.
 
 ```R
+x = 2
+v = 10
+
 # 4a
 p = dchisq(x, 10)
 p
@@ -277,6 +280,8 @@ varian
 Penyelesaian dilakukan dengan menggunakan distribusi eksponensial dengan bantuan fungsi dexp(). Dari fungsi tersebut, didapatkan bahwa probabilitasnya sebesar 0.0497870683678639.
 
 ```R
+lamda = 3
+
 # 5a
 p = dexp(lamda, rate = 1, log = FALSE)
 p
@@ -375,5 +380,8 @@ hist(rnorm(n = 100, mean = m, sd = std), xlab="x", ylab="y", breaks = 50,
 Varian didapat dengan formula sebagai berikut, dan didapatkan hasil 64.
 
 ```R
+# 6c
 varian <- std ** 2
 ```
+
+## Terima kasih.
