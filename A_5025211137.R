@@ -1,7 +1,7 @@
-# ------------ NO 1 ---------------
-
 library(dplyr)
 library(ggplot2)
+
+# ------------ NO 1 ---------------
 
 # 1a
 p = 0.20
@@ -155,7 +155,7 @@ plot(rnorm(n = 100, mean = m, sd = std))
 
 # 6.B
 hist(rnorm(n = 100, mean = m, sd = std), xlab="x", ylab="y", breaks = 50,
-     main = "5025211137_Kalyana_Probstat_A_DNhistogram")
+     main = "5025211137_Kalyana_Probstat_{A}_DNhistogram")
 
 # 6.C
 varian <- std ** 2
