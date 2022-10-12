@@ -323,7 +323,7 @@ sim_var <- var(sim_rowmean)
 
 ## SOAL 6
 
-<img width="960" alt="No 6" src="https://user-images.githubusercontent.com/107338432/195353695-019d4fa3-a4b3-4148-8a0d-aec12ffef4ce.png">
+<img width="960" alt="No 6" src="https://user-images.githubusercontent.com/107338432/195372415-faab8042-350b-4afa-b230-7c91228867c8.png">
 
 
 >Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan
@@ -370,7 +370,7 @@ hist(rnorm(n = 100, mean = m, sd = std), xlab="x", ylab="y", breaks = 50,
      main = "5025211137_Kalyana_Probstat_A_DNhistogram")
 ```
 
-<img width="678" alt="6  histogram" src="https://user-images.githubusercontent.com/107338432/195353740-3ec9de71-39ef-4ce9-903d-1be70e2f3c5a.png">
+<img width="626" alt="6  histogram" src="https://user-images.githubusercontent.com/107338432/195372527-a606e813-1566-42f6-abcd-009782a5a42d.png">
 
 
 ### 6-C
