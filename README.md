@@ -10,7 +10,8 @@ Kelas : A
 
 ## SOAL 1
 
-fotoooooooooooooooooooooooooooooooooooooooooooooo
+<img width="960" alt="No 1" src="https://user-images.githubusercontent.com/107338432/195351714-f0327b7e-266f-402d-b14d-809b01b577a2.png">
+
 
 >Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya. 
 
@@ -68,6 +69,9 @@ labs(title = "Peluang X = 3 gagal Sebelum Sukses Pertama",
      y = "Probability")
 ```
 
+<img width="678" alt="1  histogram" src="https://user-images.githubusercontent.com/107338432/195352922-acad85bf-5090-41eb-88db-285faf3fc2c5.png">
+
+
 ### 1-E
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
@@ -85,7 +89,8 @@ varian
 
 ## SOAL 2
 
-fotooooooooooooooooooo
+<img width="959" alt="No 2" src="https://user-images.githubusercontent.com/107338432/195353091-afa344db-47df-4990-b653-b672b40edbb3.png">
+
 
 >Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
 
@@ -117,6 +122,9 @@ x = rbinom(nA, nS, p)
 hist(x, main = "Binomial Histogram", xlab = "Sembuh", ylab = "Frekuensi")
 ```
 
+<img width="338" alt="2  histogram" src="https://user-images.githubusercontent.com/107338432/195353149-a26d0a5c-06ec-4960-aefb-c4f065920901.png">
+
+
 ### 2-C
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.
@@ -134,7 +142,8 @@ varian
 
 ## SOAL 3
 
-fotooooooooooooooooooo
+<img width="960" alt="No 3" src="https://user-images.githubusercontent.com/107338432/195353243-866e6e01-b0b2-4c4d-9f10-d86ebe66d904.png">
+
 
 >Diketahui data dari  sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
 
@@ -177,6 +186,9 @@ poisson_data  %>% ggplot() +
   theme_bw()
 ```
 
+<img width="680" alt="3  histogram" src="https://user-images.githubusercontent.com/107338432/195353303-f52db540-5afd-401b-9714-bff31520110e.png">
+
+
 ### 3-C
 
 >dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
@@ -198,7 +210,8 @@ varian
 
 ## SOAL 4
 
-fotooooooooooooooooooo
+<img width="960" alt="No 4" src="https://user-images.githubusercontent.com/107338432/195353387-73e034cf-bf40-4ec6-9577-7b021586ec49.png">
+
 
 >Diketahui nilai x = 2 dan v = 10. Tentukan:
 
@@ -228,6 +241,9 @@ hist(x, freq = FALSE, xlim = c(0,31), ylim = c(0,0.2), main = "Chisquare Distrib
 curve(dchisq(x, v), from = 0, to = 30, n = 100, col = "red", lwd = 2, add = TRUE)
 ```
 
+<img width="674" alt="4  histogram" src="https://user-images.githubusercontent.com/107338432/195353448-d4d8fe1a-57b0-4af3-91a3-0de4ec3f76ea.png">
+
+
 ### 4-C
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
@@ -245,7 +261,8 @@ varian
 
 ## SOAL 5
 
-fotooooooooooooooooooo
+<img width="960" alt="No 5" src="https://user-images.githubusercontent.com/107338432/195353556-26e068e6-e6ec-48a7-b04e-f672b3818412.png">
+
 
 >Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
 
@@ -277,6 +294,9 @@ hist(rexp(1000, lamda), main = "Distribusi Eksponensial 1000 Bilangan Random")
 hist(rexp(10000, lamda), main = "Distribusi Eksponensial 10000 Bilangan Random")
 ```
 
+<img width="677" alt="5  histogram" src="https://user-images.githubusercontent.com/107338432/195353614-2e2062b6-5795-4909-abef-99ddbfc8a5b4.png">
+
+
 ### 5-C
 
 >Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
@@ -294,7 +314,8 @@ sim_var <- var(sim_rowmean)
 
 ## SOAL 6
 
-fotooooooooooooooooooo
+<img width="960" alt="No 6" src="https://user-images.githubusercontent.com/107338432/195353695-019d4fa3-a4b3-4148-8a0d-aec12ffef4ce.png">
+
 
 >Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan
 
@@ -339,6 +360,9 @@ NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
 hist(rnorm(n = 100, mean = m, sd = std), xlab="x", ylab="y", breaks = 50,
      main = "5025211137_Kalyana_Probstat_A_DNhistogram")
 ```
+
+<img width="678" alt="6  histogram" src="https://user-images.githubusercontent.com/107338432/195353740-3ec9de71-39ef-4ce9-903d-1be70e2f3c5a.png">
+
 
 ### 6-C
 
